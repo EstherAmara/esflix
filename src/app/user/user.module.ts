@@ -22,6 +22,10 @@ import { LoginComponent } from './login.component';
        { 
            provide: 'canDeactivateEvent',
             useValue: checkTrueOrNot
+        }, 
+        {
+            provide: 'deactiveStuff',
+            useValue: deactivateStuff,
         }
     ]
 })
@@ -30,5 +34,10 @@ export class UserModule { }
 export function checkTrueOrNot (stuff:ProfileComponent) {
     if(stuff.check) {
         return window.confirm('You have not saved changes made to this event, are you sure you want to cancel?');
+    } return true;
+}
+export function deactivateStuff (comp:LoginComponent) {
+    if(comp.check) {
+        return window.confirm('You have not saved changes made to this page, are you sure you want to leave??');
     } return true;
 }
