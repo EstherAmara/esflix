@@ -22,10 +22,6 @@ import { LoginComponent } from './login.component';
        { 
            provide: 'canDeactivateEvent',
             useValue: checkTrueOrNot
-        }, 
-        {
-            provide: 'deactiveStuff',
-            useValue: deactivateStuff,
         }
     ]
 })
